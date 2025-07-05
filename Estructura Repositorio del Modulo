@@ -1,18 +1,33 @@
 
 📁 Estructura del Módulo custom_sale_report
 
-custom_sale_report/
+odoo-custom-sale-report/
 ├── __init__.py
 ├── __manifest__.py
 ├── models/
 │   └── __init__.py
 ├── reports/
 │   ├── __init__.py
-│   ├── custom_sale_report.xml
-│   └── report_templates.xml
+│   ├── custom_sale_report.xml         # Acción del reporte
+│   └── report_templates.xml           # QWeb personalizado
 ├── views/
-│   └── sale_order_view_inherit.xml
+│   └── sale_order_view_inherit.xml    # Vista con campo extra: condiciones comerciales
 ├── static/
 │   └── description/
-│       └── icon.png
+│       ├── icon.png
+│       └── preview.png                # Captura del PDF final
 ├── README.md
+├── LICENSE
+
+📘 Descripción simplificada del contenido de cada parte
+
+
+| Carpeta/Archivo                 | Contenido                                                                 |
+|---------------------------------|---------------------------------------------------------------------------|
+| `__manifest__.py`               | Define el nombre del módulo, versión, dependencias, categoría, etc.      |
+| `models/`                       | (Opcional en este caso, solo si agregás campos nuevos a `sale.order`)    |
+| `reports/`                      | Toda la lógica del QWeb y conexión con el documento PDF personalizado     |
+| `views/`                        | Herencia de la vista para permitir editar condiciones comerciales         |
+| `static/description/`           | Icono e imagen para que GitHub muestre visualmente el resultado           |
+| `README.md`                     | Instrucciones, resumen, instalación, créditos                             |
+| `LICENSE`                       | Permisos y restricciones de uso (ej. MIT, libre uso y modificación)       |
