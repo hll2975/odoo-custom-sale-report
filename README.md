@@ -1,45 +1,66 @@
- # custom_sale_report
+# Custom Sale Report
 
-Este módulo extiende la funcionalidad de los reportes estándar de Odoo para generar un documento PDF personalizado de las órdenes de venta.
+> **🌐 Español | 🇬🇧 English below**
 
-## 🎯 Objetivo
-Proporcionar un reporte QWeb claro, profesional y adaptable para PyMEs y entornos personalizados, con campos adicionales y formato específico.
+Este módulo extiende el reporte estándar de Odoo para personalizar la orden de venta en formato PDF, utilizando QWeb.
 
-## 📦 Características
-- Encabezado con logo de la empresa, datos del cliente y vendedor
-- Tabla de líneas de venta detallada
-- Totales con desglose de impuestos
-- Condiciones comerciales editables
-- Totalmente heredado desde `report_saleorder_document`
-- Sin dependencias externas
+## ✨ Características
+- Encabezado con logo, cliente y vendedor
+- Tabla detallada de productos
+- Totales con impuestos
+- Campo adicional: "Condiciones Comerciales"
+- Herencia limpia de `report_saleorder_document`
 
-## 🧱 Requisitos
+## 📦 Requisitos
 - Odoo 15 o superior
-- Módulo `sale_management` instalado
+- Módulo `sale_management`
 
 ## 🚀 Instalación
-1. Clonar el repositorio en la carpeta de addons:
+
+1. Cloná este repositorio dentro del directorio de addons de tu instancia Odoo:
    ```bash
-   git clone https://github.com/tu_usuario/custom_sale_report.git
+   git clone https://github.com/TU_USUARIO/odoo-custom-sale-report.git
 
-2. Reiniciar el servidor de Odoo
+2. Reiniciá el servidor de Odoo.
 
-3. Activar el modo desarrollador e instalar el módulo desde Aplicaciones
+3. Activá el modo desarrollador e instalá el módulo desde el backend.
 
-📄 Estructura Técnica
-Herencia de vistas y reportes en reports/
+📝 Licencia
+MIT License
 
-Campo nuevo editable en sale.order para condiciones comerciales (editable desde UI)
+📸 Vista previa
 
-Plantilla QWeb clara y modularizada
+🇬🇧 English
+This Odoo module customizes the standard sales order PDF report using QWeb templates.
 
-✍️ Autores
-Desarrollado por [Tu Nombre] - Desarrollador Odoo | [LinkedIn/Portafolio]
+✨ Features
 
-🧪 Licencia
-MIT
++ Header with company logo, customer and salesperson
+- Detailed product table
+- Totals with tax breakdown
+- Extra editable field: "Commercial Terms"
+- Clean inheritance of report_saleorder_document
 
+📦 Requirements:
 
+- Odoo 15 or higher
+- sale_management module installed
+
+🚀 Installation
+
+1. Clone the repository into your Odoo addons folder:
+git clone https://github.com/YOUR_USERNAME/odoo-custom-sale-report.git
+
+2. Restart the Odoo server.
+
+3. Activate developer mode and install the module from the Apps menu.
+
+📝 License
+MIT License
+
+📸 Preview
+
+Desarrollado por Tecnológica VHL| Built by Tecnológica VHL 
 ---
 
 ### 🔧 Fragmento QWeb básico (en `report_templates.xml`)
