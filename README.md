@@ -38,3 +38,37 @@ Desarrollado por [Tu Nombre] - Desarrollador Odoo | [LinkedIn/Portafolio]
 
 🧪 Licencia
 MIT
+
+
+---
+
+### 🔧 Fragmento QWeb básico (en `report_templates.xml`)
+
+```xml
+<t t-name="custom_sale_report.custom_report_saleorder">
+  <t t-call="web.external_layout">
+    <div class="page">
+      <h2>Orden de Venta - Personalizada</h2>
+      <p>Cliente: <t t-esc="o.partner_id.name"/></p>
+      <p>Vendedor: <t t-esc="o.user_id.name"/></p>
+      <!-- Detalle del pedido -->
+      <table class="table table-sm">
+        <thead>
+          <tr>
+            <th>Producto</th><th>Cantidad</th><th>Precio</th><th>Subtotal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr t-foreach="o.order_line" t-as="line">
+            <td><t t-esc="line.name"/></td>
+            <td><t t-esc="line.product_uom_qty"/></td>
+            <td><t t-esc="line.price_unit"/></td>
+            <td><t t-esc="line.price_subtotal"/></td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Total: <t t-esc="o.amount_total"/></p>
+      <p><strong>Condiciones:</strong> <t t-esc="o.x_commercial_terms"/></p>
+    </div>
+  </t>
+</t>
