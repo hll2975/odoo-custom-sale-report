@@ -1,7 +1,7 @@
 {
     "name": "Custom Sale Report",
     "version": "15.0.1.0.0",
-    "summary": "Reporte personalizado PDF para órdenes de venta",
+    "summary": "Reporte PDF personalizado de órdenes de venta con condiciones comerciales.",
     "category": "Sales",
     "author": "Hernán",
     "license": "MIT",
@@ -13,5 +13,5 @@
     ],
     "application": False,
     "installable": True,
-    "auto_install": False,
 }
+
