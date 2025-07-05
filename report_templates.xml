@@ -1,0 +1,39 @@
+<odoo>
+  <template id="custom_report_saleorder" inherit_id="sale.report_saleorder_document">
+    <xpath expr="//div[@class='page']" position="replace">
+      <div class="page">
+        <h2>Orden de Venta</h2>
+        <p><strong>Cliente:</strong> <t t-esc="o.partner_id.name"/></p>
+        <p><strong>Vendedor:</strong> <t t-esc="o.user_id.name"/></p>
+
+        <table class="table table-sm mt16">
+          <thead>
+            <tr>
+              <th>Producto</th>
+              <th>Cantidad</th>
+              <th>Precio Unitario</th>
+              <th>Subtotal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr t-foreach="o.order_line" t-as="line">
+              <td><t t-esc="line.name"/></td>
+              <td><t t-esc="line.product_uom_qty"/></td>
+              <td><t t-esc="line.price_unit"/></td>
+              <td><t t-esc="line.price_subtotal"/></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p><strong>Subtotal:</strong> <t t-esc="o.amount_untaxed"/></p>
+        <p><strong>Impuestos:</strong> <t t-esc="o.amount_tax"/></p>
+        <p><strong>Total:</strong> <t t-esc="o.amount_total"/></p>
+
+        <div t-if="o.x_commercial_terms" class="mt16">
+          <strong>Condiciones Comerciales:</strong>
+          <p><t t-esc="o.x_commercial_terms"/></p>
+        </div>
+      </div>
+    </xpath>
+  </template>
+</odoo>
