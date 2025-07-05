@@ -1,0 +1,15 @@
+*.pyc
+*.pyo
+*.swp
+*~
+__pycache__/
+*.log
+*.bak
+.idea/
+.vscode/
+.DS_Store
+*.zip
+*.egg-info/
+.env
+.odoo
+*.iml
