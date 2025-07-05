@@ -1,0 +1,18 @@
+
+📁 Estructura del Módulo custom_sale_report
+
+custom_sale_report/
+├── __init__.py
+├── __manifest__.py
+├── models/
+│   └── __init__.py
+├── reports/
+│   ├── __init__.py
+│   ├── custom_sale_report.xml
+│   └── report_templates.xml
+├── views/
+│   └── sale_order_view_inherit.xml
+├── static/
+│   └── description/
+│       └── icon.png
+├── README.md
